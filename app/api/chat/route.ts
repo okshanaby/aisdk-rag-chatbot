@@ -51,7 +51,7 @@ export async function POST(req: Request) {
       model: google("gemini-2.5-flash"),
       messages: convertToModelMessages(messages),
       tools,
-      system: `You are a helpful assistant with access to a knowledge base. You can answer any questions, but first look at the knowledge base if you find it answer if not, look if its a general question you can answer if not skip. 
+      system: `You are a helpful assistant with access to a knowledge base. 
           When users ask questions, search the knowledge base for relevant information.
           Always search before answering if the question might relate to uploaded documents.
           Base your answers on the search results when available. Give concise answers that correctly answer what the user is asking for. Do not flood them with all the information from the search results.`,
